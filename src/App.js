@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import BookCardsFantasy from "./Components/BookCardsFantasy";
+import BookCardsHistory from "./Components/BookCardsHistory";
+import Jumbotron from "./Components/Jumbotron";
+
+import MainNav from "./Components/MainNav";
+import MyFooter from "./Components/MyFooter";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MainNav />
+      <Jumbotron />
+      <div className="w-100 d-flex flex-wrap mt-3  justify-content-around">
+        <BookCardsFantasy />
+        <BookCardsHistory />
+      </div>
+      <MyFooter />
     </div>
   );
 }
